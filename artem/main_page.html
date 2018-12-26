@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Компьютеры для всех! (Учебный сайт)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="artem/static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="artem/static/favicon.ico" type="image/x-icon">
+
+    <style>
+    body{
+        color: #eee;
+        background-image: url("chrome://global/skin/media/imagedoc-darknoise.png");
+    }
+    @keyframes title {
+        100%{color: aqua;}
+    }
+    @keyframes subtitle {
+        100%{color:coral}
+    }
+    @keyframes pulse {
+        0%{transform: scale(1, 1);}
+        50%{transform: scale(1.4, 1.4);}
+        0%{transform: scale(1, 1);}
+    }
+
+    .container h1 {
+        animation: title 3s forwards 1s;
+    }
+    .container h2 {
+        animation: subtitle 4s forwards 4s;
+    }
+    .favicon{
+        animation: pulse 3s infinite 2s;
+    }
+    .favicon:hover{
+        transform: scale(1.4, 1.4);
+    }
+
+    #table{
+        position: absolute;
+        width: 30%;
+        left: 33%;
+        top: 40%;
+        align-content: center;
+        background-color: darkkhaki;
+        border: 4px solid teal;
+    }
+
+    footer{
+        font-size: 90%;
+        position: absolute;
+        bottom: 5px;
+        right:2%;
+    }
+
+    #table li{
+        color: darkslateblue;
+    }
+/*
+    #showcase{
+       margin: 5%;
+       padding: 20px;
+        position: absolute;
+        left: 61%;
+        top: 20%;
+        width: 30%;
+        height: 45%;
+        display: none;
+        align-content: center;
+        background-color:mediumslateblue;
+        border: 2px solid steelblue;
+    }
+
+    .msg{
+        position:absolute;
+        bottom:1%;
+        list-style-type: none;
+    }
+
+    #msg1{
+        display: none;
+    }
+
+    #msg2{
+       display: none;
+    }
+
+    #msg3{
+       display: none; 
+    }
+
+    #table .option:hover + li{
+        color:red;
+    }
+
+    #table .option:hover + #showcase{
+        display:block;
+    }
+
+    #table #comps:hover + #picture {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lenovo_G500s_laptop-2905.jpg/640px-Lenovo_G500s_laptop-2905.jpg) no-repeat;
+        width: 380px;
+        height: 280px;
+        padding-left: 380px;
+    }
+
+    #table #peripheral:hover + #picture {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Swedish_keyboard_20050614.jpg/640px-Swedish_keyboard_20050614.jpg) no-repeat;
+        width: 380px;
+        height: 280px;
+        padding-left: 380px;
+    }
+
+    #table #details:hover + #picture {
+        display: block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Laptop-hard-drive-exposed.jpg/627px-Laptop-hard-drive-exposed.jpg) no-repeat;
+        width: 380px;
+        height: 280px;
+        padding-left: 380px;
+    }
+
+    #table #comps:hover + #msg1{
+        display:block;
+    }
+
+    #table #peripheral:hover + #msg2 {
+        display:inline;
+    }
+
+    #table #details:hover + #msg3 {
+        display:inline;
+    }
+
+    #table #info:hover + #msg4 {
+        display:inline;
+    }
+*/
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1 style="text-align: center; color: white">Компьютеры для всех!</h1>
+    <h2 style="text-align: center; color:white">(Учебный сайт)</h2>
+    </div>
+    <br>
+    <img src="artem/static/favicon.ico" class = "favicon" style="position: absolute;
+    top: 24px;
+    left: 25%;">
+    <a style="text-align: center; color:magenta; display: none;">test</a>
+
+    <ul id="table">
+        <br>
+        <li><b><a>Каталог:</a></b></li>
+        <br>
+        <li class = "option" id="comps">Настольные Компьютеры и Ноутбуки</li>
+        <li class = "option" id="peripheral">Периферия и аксесуары</li>
+        <li class = "option" id="details">Компьютерные компоненты</li>
+        <br>
+        <li class = "option" id="info">Информация</li>
+        <br>
+    </ul>
+<!--
+    <ul id = "showcase">
+        <img class="picture" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Laptop-hard-drive-exposed.jpg/627px-Laptop-hard-drive-exposed.jpg" width="380" height="280">
+        https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Lenovo_G500s_laptop-2905.jpg/640px-Lenovo_G500s_laptop-2905.jpg
+        https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Laptop-hard-drive-exposed.jpg/627px-Laptop-hard-drive-exposed.jpg
+        https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Swedish_keyboard_20050614.jpg/640px-Swedish_keyboard_20050614.jpg->
+        <br style="height:64px">
+        <li class = "msg" id="msg1"><p>Магазин предоставляет широкий выбор готовых компьютеров, собранных с наибольшей эффективностью, а так же ноутбуков.</p></li>
+        <li class = "msg" id="msg2"><p>Дополнительные компоненты подарят вам максимальный опыт общения с компьютером.</p></li>
+        <li class = "msg" id="msg3"><p>Компьютерные компоненты пригодятся для замены неисправных частей и усовершенствования компьютера.</p></li>
+        <li class = "msg" id="msg4"><p>Контактная Информация</p></li>
+    </ul>
+-->
+    <footer>Храпов Артем, 2018-2019г, МОУ "Гимназия"</footer>
+</body>
+</html>
